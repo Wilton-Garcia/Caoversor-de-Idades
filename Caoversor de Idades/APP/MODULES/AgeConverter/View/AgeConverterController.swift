@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AgeConverterController.swift
 //  Caoversor de Idades
 //
 //  Created by Wilton Garcia on 07/05/21.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AgeConverterController : UIViewController{
+    private var myView = AgeConverterView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view = myView
     }
-
-
 }
-
