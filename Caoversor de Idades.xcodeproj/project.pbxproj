@@ -13,6 +13,7 @@
 		4D33CA722646209B00CDE5AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D33CA702646209B00CDE5AD /* Main.storyboard */; };
 		4D33CA742646209D00CDE5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D33CA732646209D00CDE5AD /* Assets.xcassets */; };
 		4D33CA772646209D00CDE5AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D33CA752646209D00CDE5AD /* LaunchScreen.storyboard */; };
+		4D33CA832646254000CDE5AD /* AgeConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33CA822646254000CDE5AD /* AgeConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D33CA732646209D00CDE5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D33CA762646209D00CDE5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D33CA782646209D00CDE5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D33CA822646254000CDE5AD /* AgeConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		4D33CA692646209B00CDE5AD /* Caoversor de Idades */ = {
 			isa = PBXGroup;
 			children = (
+				4D33CA7E264624B400CDE5AD /* APP */,
 				4D33CA6A2646209B00CDE5AD /* AppDelegate.swift */,
 				4D33CA6C2646209B00CDE5AD /* SceneDelegate.swift */,
 				4D33CA6E2646209B00CDE5AD /* ViewController.swift */,
@@ -65,6 +68,38 @@
 				4D33CA782646209D00CDE5AD /* Info.plist */,
 			);
 			path = "Caoversor de Idades";
+			sourceTree = "<group>";
+		};
+		4D33CA7E264624B400CDE5AD /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				4D33CA7F264624C700CDE5AD /* MODULES */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		4D33CA7F264624C700CDE5AD /* MODULES */ = {
+			isa = PBXGroup;
+			children = (
+				4D33CA80264624EB00CDE5AD /* AgeConverter */,
+			);
+			path = MODULES;
+			sourceTree = "<group>";
+		};
+		4D33CA80264624EB00CDE5AD /* AgeConverter */ = {
+			isa = PBXGroup;
+			children = (
+				4D33CA812646250C00CDE5AD /* View */,
+			);
+			path = AgeConverter;
+			sourceTree = "<group>";
+		};
+		4D33CA812646250C00CDE5AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D33CA822646254000CDE5AD /* AgeConverterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D33CA6F2646209B00CDE5AD /* ViewController.swift in Sources */,
+				4D33CA832646254000CDE5AD /* AgeConverterView.swift in Sources */,
 				4D33CA6B2646209B00CDE5AD /* AppDelegate.swift in Sources */,
 				4D33CA6D2646209B00CDE5AD /* SceneDelegate.swift in Sources */,
 			);
