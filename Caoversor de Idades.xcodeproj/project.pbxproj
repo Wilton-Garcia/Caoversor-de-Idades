@@ -12,6 +12,7 @@
 		4D33CA742646209D00CDE5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D33CA732646209D00CDE5AD /* Assets.xcassets */; };
 		4D33CA832646254000CDE5AD /* AgeConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33CA822646254000CDE5AD /* AgeConverterView.swift */; };
 		4D33CA852646288700CDE5AD /* AgeConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33CA842646288700CDE5AD /* AgeConverterController.swift */; };
+		4D33CA882646DE2100CDE5AD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33CA872646DE2100CDE5AD /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4D33CA782646209D00CDE5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D33CA822646254000CDE5AD /* AgeConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeConverterView.swift; sourceTree = "<group>"; };
 		4D33CA842646288700CDE5AD /* AgeConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeConverterController.swift; sourceTree = "<group>"; };
+		4D33CA872646DE2100CDE5AD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		4D33CA7F264624C700CDE5AD /* MODULES */ = {
 			isa = PBXGroup;
 			children = (
+				4D33CA862646DE0900CDE5AD /* Utils */,
 				4D33CA80264624EB00CDE5AD /* AgeConverter */,
 			);
 			path = MODULES;
@@ -94,6 +97,14 @@
 				4D33CA842646288700CDE5AD /* AgeConverterController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4D33CA862646DE0900CDE5AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D33CA872646DE2100CDE5AD /* Fonts.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D33CA832646254000CDE5AD /* AgeConverterView.swift in Sources */,
+				4D33CA882646DE2100CDE5AD /* Fonts.swift in Sources */,
 				4D33CA6B2646209B00CDE5AD /* AppDelegate.swift in Sources */,
 				4D33CA6D2646209B00CDE5AD /* SceneDelegate.swift in Sources */,
 				4D33CA852646288700CDE5AD /* AgeConverterController.swift in Sources */,

@@ -16,9 +16,11 @@ final class AgeConverterView: UIView{
         return viewBackground
     }()
     
-    private let textAppName: UITextView = {
-       let textAppName = UITextView()
+    private let textAppName: UILabel = {
+       let textAppName = UILabel()
         textAppName.text = "Cãoversor de Idade"
+        textAppName.font = textAppName.font.bold
+        textAppName.font = textAppName.font.withSize(36)
         textAppName.translatesAutoresizingMaskIntoConstraints = false
         textAppName.backgroundColor = .clear
         return textAppName
@@ -34,6 +36,8 @@ final class AgeConverterView: UIView{
     
     private let fieldAge: UITextField = {
        let fieldAge = UITextField()
+        fieldAge.keyboardType = UIKeyboardType.numberPad
+        fieldAge.textColor = UIColor.black
         fieldAge.translatesAutoresizingMaskIntoConstraints = false
         fieldAge.placeholder = "Idade"
         fieldAge.backgroundColor = .white
@@ -108,7 +112,7 @@ final class AgeConverterView: UIView{
     
     convenience init(){
         self.init(frame:.zero)
-        backgroundColor = .white
+        backgroundColor = .orange
         //setupBackround()
         setupTextAppName()
         setupTextInstruction()
