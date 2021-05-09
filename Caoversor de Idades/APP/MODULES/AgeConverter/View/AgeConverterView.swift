@@ -30,6 +30,7 @@ final class AgeConverterView: UIView{
         let textInstruction = UITextView()
         textInstruction.text = "Digite a idade do cachorro"
         textInstruction.translatesAutoresizingMaskIntoConstraints = false
+        textInstruction.font = textInstruction.font?.withSize(18)
         textInstruction.backgroundColor = .clear
         return textInstruction
     }()
@@ -47,10 +48,29 @@ final class AgeConverterView: UIView{
     private let butonCalculate: UIButton = {
        let buttonCalculate = UIButton()
         buttonCalculate.titleLabel?.text = "Cãoverter"
+        buttonCalculate.backgroundColor = .black
+        buttonCalculate.setTitle("Cãoverter", for: .normal)
+        buttonCalculate.addTarget(self, action: #selector(buttonCalculateAction), for: .touchUpInside)
         buttonCalculate.translatesAutoresizingMaskIntoConstraints = false
-        buttonCalculate.backgroundColor = .red
         return buttonCalculate
     }()
+    
+    private let textResult: UILabel = {
+        let labelResult = UILabel()
+        labelResult.text = "A idade em anos humanos é: 0 anos"
+        labelResult.translatesAutoresizingMaskIntoConstraints = false
+        labelResult.font = labelResult.font.withSize(18)
+        labelResult.numberOfLines = 2
+       return labelResult
+    }()
+    
+    @objc func buttonCalculateAction(sender: UIButton){
+        if let age = Int(fieldAge.text!){
+            textResult.text = "A idade em anos humanos é: " + String(AgeConverterController().convertAge(Age: age)) + " anos"
+            fieldAge.text  = "";
+        }
+    }
+    
     
     private func setupBackround(){
         addSubview(viewBackground)
@@ -91,7 +111,7 @@ final class AgeConverterView: UIView{
         addSubview(fieldAge)
         
         NSLayoutConstraint.activate([
-            fieldAge.topAnchor.constraint(equalTo: textInstruction.topAnchor, constant: 30),
+            fieldAge.topAnchor.constraint(equalTo: textInstruction.topAnchor, constant: 50),
             fieldAge.heightAnchor.constraint(equalToConstant: 30),
             fieldAge.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
             fieldAge.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30)
@@ -103,10 +123,21 @@ final class AgeConverterView: UIView{
         addSubview(butonCalculate)
         
         NSLayoutConstraint.activate([
-            butonCalculate.topAnchor.constraint(equalTo: fieldAge.topAnchor, constant: 30),
+            butonCalculate.topAnchor.constraint(equalTo: fieldAge.topAnchor, constant: 100),
             butonCalculate.heightAnchor.constraint(equalToConstant: 30),
             butonCalculate.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
             butonCalculate.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30)
+        ])
+    }
+    
+    private func setResultLabel(){
+        addSubview(textResult)
+        
+        NSLayoutConstraint.activate([
+            textResult.topAnchor.constraint(equalTo: butonCalculate.topAnchor, constant: 100),
+            textResult.heightAnchor.constraint(equalToConstant: 30),
+            textResult.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            textResult.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30)
         ])
     }
     
@@ -118,6 +149,8 @@ final class AgeConverterView: UIView{
         setupTextInstruction()
         setupFieldAge()
         setupFieldAge()
+        setupBottonCalculate()
+        setResultLabel()
     }
     
 }

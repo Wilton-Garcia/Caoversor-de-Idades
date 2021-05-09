@@ -14,4 +14,8 @@ class AgeConverterController : UIViewController{
         super.viewDidLoad()
         self.view = myView
     }
+    
+    func convertAge(Age: Int) -> Int{
+        return Age * 7
+    }
 }
